@@ -1,0 +1,210 @@
+body{
+  background-color: #333333;
+  color:#DDDDDD;
+}
+#actions label, #actions input, #actions button {
+  margin-right: 10px;
+}
+h1 {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+button, .delete {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 0 none;
+  border-radius: 10px;
+  background-color:  #007df7;
+  color:#DDDDDD;
+  -webkit-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+  cursor: pointer;
+}
+button:hover, .delete:hover {
+  background-color: #02468a;
+}
+button:disabled {
+  background-color: grey;
+  color: #272727;
+}
+:disabled {
+  cursor: not-allowed;
+}
+input[type="checkbox"], select, option{
+  cursor: pointer;
+}
+option:disabled {
+  color: #272727;
+  background-color: grey;
+}
+.App {
+  max-width: 850px;;
+  padding: 15px;
+}
+.handle {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.task-text {
+  word-break: break-all;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15pt;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+.buttons-container button, .delete {
+  float: right;
+  margin-left: 4px;
+}
+button.add{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+span.date-added {
+  font-size: 10pt;
+  color: #afafaf;
+}
+.react-confirm-alert-overlay {
+  background: rgb(20 20 20 / 90%);
+}
+.react-confirm-alert-body{
+  width: 80vw;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #272727;
+  color: #DDDDDD;
+  border: 5px solid #007df7;
+  border-radius: 10px;
+}
+.react-confirm-alert-button-group > button {
+  background-color: #007df7;
+  color:#DDDDDD;
+  font-size: 14pt;
+  -webkit-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+.react-confirm-alert-button-group > button:nth-of-type(2), .delete{
+  background-color: rgb(161, 80, 50);
+}
+.react-confirm-alert-button-group > button:hover {
+  background-color: #02468a;
+}
+.react-confirm-alert-button-group > button:nth-of-type(2):hover, .delete:hover{
+  background-color: rgb(85, 38, 22);
+}
+select#sort-choices {
+  height: 35px;
+  margin-left: 5px;
+  background: #272727;
+  color: #ddd;
+}
+select#sort-choices:disabled {
+  background-color: grey;
+  color: #272727;
+}
+input#add-input {
+  width: 60vw;
+  max-width: 223px;
+  height: 15px;
+  margin-right: 0;
+  padding: 10px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border: 0 none;
+}
+#sortable { 
+  list-style-type: none;
+  padding-left: 0;
+}
+#sortable li {
+  display: -ms-grid;
+  display: grid;
+	-ms-grid-columns: 0.30fr 10px 0.35fr 10px 2fr 10px 0.45fr;
+	grid-template-columns: 0.30fr 0.35fr 2fr 0.45fr;
+	-webkit-column-gap: 5px;
+	   -moz-column-gap: 5px;
+	        column-gap: 5px;
+	row-gap: 10px;
+	margin: 4px 0;
+  padding: 5px;
+  background: #272727;
+  border: 1px solid #fff;
+}
+#sortable label:nth-of-type(2) input {
+  max-width: 140px;
+  height: 30px;
+  border-radius: 8px;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+#sortable label:nth-of-type(1) {
+  margin-right: 0;
+}
+#sortable input[type="checkbox"]{
+  width: 30px;
+  height: 30px;
+  margin: 0 5 px;
+}
+#sortable button {
+  width: 60px;
+}
+#check-all {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+/*
+320px — 480px: mobile
+481px — 768px: iPads, tablets
+769px — 1024px: small screens, laptops
+1025px — 1200px: desktops, widescreens
+1201px and above :  extra wide screens, TV 
+*/
+@media (prefers-reduced-motion: reduce) {
+  
+}
+@media only screen and (min-width:481px) {
+	
+}
+@media only screen and (max-width:636.999px) {
+  div#add-task {
+    display: block;
+  }
+}
+@media only screen and (min-width:637px) {
+  div#add-task {
+    display: inline;
+  }
+}
+@media only screen and (min-width:769px) {
+  .task-text {
+    font-size: 20pt;
+  }
+  #sortable label:nth-of-type(2) input {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width:1025px) {
+  #sortable li {
+    -ms-grid-columns: 0.35fr 0.35fr 6fr 0.45fr;
+    grid-template-columns: 0.35fr 0.35fr 6fr 0.45fr;
+  }
+}
+@media only screen and (min-width:1201px) {
+  
+}
+/* galaxy fold */
+@media (min-width: 280px) and (max-width: 319.99px) { 
+  .App{
+    width: 120vw;
+  }
+}
